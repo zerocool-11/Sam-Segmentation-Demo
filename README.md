@@ -26,22 +26,22 @@ This script demonstrates the use of the **Segment Anything Model (SAM)** and **F
 Install dependencies with:
 
 ```bash
-pip install ultralytics opencv-python
+pip install ultralytics==8.3.52 opencv-python
 ```
 
 ## Usage
 
 1. Clone this repository:
    ```bash
-   git clone https://github.com/your-repo/sam-example.git
-   cd sam-example
+   git clone https://github.com/zerocool-11/Sam-Segmentation-Demo
+   cd Sam-Segmentation-Demo
    ```
 
 2. Place your image file in the same directory as the script and rename it to `nature.jpg`. Alternatively, update the script with your image path.
 
 3. Run the script:
    ```bash
-   python sam_script.py
+   python main.py
    ```
 
 4. Follow the prompts in the terminal to select a segmentation method:
@@ -55,9 +55,9 @@ pip install ultralytics opencv-python
 
 You can experiment with different models:
 - **SAM (default)**: `sam2.1_s.pt`
-- **FastSAM**: Uncomment the relevant line in the script to use `FastSAM-s.pt` or `FastSAM-x.pt`.
+- **FastSAM**: Uncomment the relevant line in the script to use `FastSAM-s.pt` or `FastSAM-l.pt`.
 
-Download models from the [Ultralytics Model Hub](https://ultralytics.com).
+Download models from the [Ultralytics Model Hub](https://docs.ultralytics.com/models/sam-2/#how-to-use-sam-2-versatility-in-image-and-video-segmentation).
 
 ## Examples
 

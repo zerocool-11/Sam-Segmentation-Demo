@@ -8,6 +8,7 @@ ONLINE = False
 
 # Load the SAM model
 model = SAM("sam2.1_s.pt")
+# model = FastSAM("FastSAM-s.pt")  # or FastSAM-x.pt
 
 # Display model information (optional)
 model.info()
@@ -42,12 +43,11 @@ except ValueError as e:
     exit(1)
 
 # Define reusable points for prompts
-bbox_points = [[661, 997], [1893, 1516]]
-multi_points = [[661, 997], [1893, 1516]]
+multi_points = [[661, 997], [1893, 1516]] 
 
 # Process based on selected option
 if num == 1:
-    results = model(img, bboxes=[bbox_points[0][0], bbox_points[0][1], bbox_points[1][0], bbox_points[1][1]], show=True)
+    results = model(img, bboxes=[multi_points[0][0], multi_points[0][1], multi_points[1][0], multi_points[1][1]], show=True)
     print("Results:", results)
 
 elif num == 2:
